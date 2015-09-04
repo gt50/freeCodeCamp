@@ -1,5 +1,7 @@
 function convert(num) {
- return num;
+    var tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+    var ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    return tens[Math.floor(num/10)] + ones[num %10];
 }
 
 console.log(convert(36));
